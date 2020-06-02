@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ext": "js",
+  "execMap": {
+    "js": "node --inspect=0.0.0.0:9229"
+  }
+}
