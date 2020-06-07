@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VARIANT: 12
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    links:
+      - mongo
+
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db
