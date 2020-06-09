@@ -1,7 +1,8 @@
 {
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/coverge": true
-    }
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/coverge": true
+  },
+  "editor.rulers": [120]
 }
