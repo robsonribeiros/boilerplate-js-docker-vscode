@@ -29,11 +29,11 @@ jobs:
       - name: Run a sonar scanner
         uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_LOGIN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
         with:
+          entrypoint: "sonar-scanner"
           args: |
-            "-D sonar.projectKey=$GITHUB_REPOSITORY"
+            "-Dproject.settings=./sonar-project.properties"
 
 
