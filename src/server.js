@@ -8,6 +8,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
+app.disable("x-powered-by");
 app.get('/', (req, res) => {
   res.send('<h1>Hello world from remote Docker!</h1>');
 });
