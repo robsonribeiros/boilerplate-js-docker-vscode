@@ -30,6 +30,7 @@ jobs:
         uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
           SONAR_LOGIN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
         with:
           entrypoint: "sonar-scanner"
